@@ -1,0 +1,56 @@
+.mb-3 {
+    width: 300px;
+}
+
+form {
+    /* border: solid red;  */
+    background-color: gainsboro;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form-container {
+    /* border: solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.smalltextbox {
+    width: 40%;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: center;
+
+}
+
+.icon {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 2%;
+    left: 98%;
+
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 100px;
+    background-color: yellow;
+    height: 25vh;
+}
+
+footer a {
+    font-size: 25px;
+    margin: 5px;
+}
