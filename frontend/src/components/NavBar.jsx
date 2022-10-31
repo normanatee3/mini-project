@@ -4,17 +4,20 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 // ADDITIONAL IMPORTS
 import { Link } from "react-router-dom";
 import * as userService from "../utilities/users-service";
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 
 
 // CREATE COMPONENT
-const NavBar = ({ user, setUser, getMovies }) => {
-
+const NavBar = ({ setShow, user, setUser, getMovies }) => {
+    const handleShow = () => setShow(true);
     // Create a function responsible for loggin the user out
     const handleLogOut = () => {
         // Call the logout function
@@ -24,7 +27,7 @@ const NavBar = ({ user, setUser, getMovies }) => {
         setUser(null);
     };
 
-    console.log(user);
+    // console.log(user);
     return (
         <Navbar sticky="top" bg="dark" variant="dark">
             <Container>
@@ -36,10 +39,12 @@ const NavBar = ({ user, setUser, getMovies }) => {
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
-                        <Nav.Link as={Link} onClick={() =>{
+                        <Nav.Link as={Link} onClick={() => {
                             return handleLogOut()
                         }} to="">Signed in as: {user.newUser.name}</Nav.Link>
                     </Navbar.Text>
+                        
+                <Button onClick={handleShow} style={{marginLeft: "30px"}}><i className="bi bi-cart"></i></Button>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

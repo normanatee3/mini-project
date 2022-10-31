@@ -22,9 +22,9 @@ function AuthPage({ setUser }) {
                 }
             <h3 onClick={() => setShowLogin(!showLogin)}>
                 {showLogin ?
-                    'GO TO LOG IN'
+                    'GO TO SIGN UP'
                     :
-                    'GO TO SIGN UP'}
+                    'GO TO LOG IN'}
             </h3>
         </div>
     )
