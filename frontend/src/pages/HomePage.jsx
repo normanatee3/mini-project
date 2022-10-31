@@ -3,23 +3,20 @@ import { useState, useEffect } from 'react';
 import axios from 'axios'
 import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import Placeholder from "react-bootstrap/Placeholder";
 import Container from "react-bootstrap/Container"
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 
 const HomePage = () => {
     const [homeMovies, setHomeMovies] = useState(null)
-
+    const page = (Math.floor(Math.random()*10)+1).toString()
     const options = {
         method: 'GET',
         url: 'https://moviesdatabase.p.rapidapi.com/titles',
         params: {
             info: 'base_info',
             limit: '5',
-            page: '1',
+            page: page,
             titleType: 'movie',
             year: '2021',
             list: 'most_pop_movies'
@@ -50,9 +47,9 @@ const HomePage = () => {
     }
     return (
         <div className="home">
-            <br/>
+            <br />
             <h1>Blockbuster strikes back: Now with MERN attitude</h1>
-            <br/>
+            <br />
             <div className="contents">
                 {homeMovies ? (
                     <Carousel variant="dark">
@@ -77,14 +74,16 @@ const HomePage = () => {
                 ) : null}
 
                 <div className="content">
+                    <br />
                     <h3>Find movies like these, and many more in our shop!</h3>
+                    <br />
                 </div>
 
             </div>
 
             <footer className='d-flex flex-column'>
 
-                
+
                 {/* Meet the team */}
 
                 <Container className="d-flex justify-content-around" id="meet">
@@ -157,8 +156,8 @@ const HomePage = () => {
                             </a>
                         </Card.Body>
                     </Card>
-                    <br/>
-                
+                    <br />
+
                 </Container>
                 <Row className="copyright">
                     <p id="copy">© 2028 MERNmusters. All Rights Reserved.</p>

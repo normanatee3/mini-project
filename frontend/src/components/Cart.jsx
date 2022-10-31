@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 
@@ -33,7 +32,7 @@ function Cart({ deleteMovie, array, show, setShow }) {
                 <Offcanvas.Body>
                     {array.map((movie, i) => {
                         return (
-
+                            <>
                             <Card style={movie.method === "Rent" ? { backgroundColor: "rgb(222, 238, 255)", padding: "5px" } : { backgroundColor: "rgb(222, 255, 228)", padding: "5px" }}>
                                 <Row>
 
@@ -54,6 +53,8 @@ function Cart({ deleteMovie, array, show, setShow }) {
                                     </Col>
                                 </Row>
                             </Card>
+                            <br/>
+                            </>
                         )
                     })}
                     <Container className='justify-content-end'>

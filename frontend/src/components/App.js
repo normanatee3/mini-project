@@ -17,7 +17,6 @@ function App() {
   const [movies, setMovies] = useState(null)
   const [page, setPage] = useState("1")
   const [genre, setGenre] = useState('Animation')
-  const [activeMovie, setActiveMovie] = useState(null)
   const [array, setArray] = useState([])
   const [show, setShow] = useState(false);
   const options = {
@@ -79,7 +78,7 @@ function App() {
   }
 
   const deleteMovie = (e) => {
-    setArray(array.filter((item, index)=>index != e))
+    setArray(array.filter((item, index)=>index !== e))
   }
 
   const changePage = async(e) =>{

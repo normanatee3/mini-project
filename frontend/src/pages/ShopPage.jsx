@@ -53,7 +53,7 @@ function ShopPage({ buyMovie, rentMovie, getMovies, movies, setPage, setGenre })
                 movies ?
                     <>
                     <br/>
-                        <Container fluid className='d-flex justify-content-around'>
+                        <Container fluid className='g-4 d-flex justify-content-around'>
                             <Row>
                             <Col>
                             <Pagination className='g-4' bsPrefix='pagination justify-content-center' size="md">
@@ -71,7 +71,6 @@ function ShopPage({ buyMovie, rentMovie, getMovies, movies, setPage, setGenre })
                                 <option value="Adventure">Adventure</option>
                                 <option value="Biography">Biography</option>
                                 <option value="Crime">Crime</option>
-                                <option value="Documentary">Documentary</option>
                                 <option value="Drama">Drama</option>
                                 <option value="Family">Family</option>
                                 <option value="Fantasy">Fantasy</option>
